@@ -1,0 +1,18 @@
+{
+  "name": "petfinder-full-stack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Gwendolyn Williams",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.0",
+    "angular-route": "^1.5.0",
+    "express": "^4.13.4",
+    "path": "^0.12.7"
+  }
+}

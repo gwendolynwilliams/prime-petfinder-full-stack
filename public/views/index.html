@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Petfinder</title>
+    <link rel="stylesheet" href="/views/style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Syncopate:400,700|Bitter|Raleway' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="/vendors/angular.min.js"></script>
+    <script type="text/javascript" src="/vendors/angular-route.min.js"></script>
+    <script type="text/javascript" src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/findAnimalController.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/favoritesController.js"></script>
+
+
+</head>
+<body>
+<h1>Petfinder</h1>
+
+<div id="wrapper">
+    <div id="content">
+        <div ng-include="'/views/templates/nav.html'"></div>
+
+        <main ng-view></main>
+    </div>
+</div>
+
+<div ng-include="'/views/templates/footer.html'"></div>
+
+</body>
+</html>

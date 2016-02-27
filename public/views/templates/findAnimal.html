@@ -1,0 +1,39 @@
+<div class="pet-page">
+
+    <h2>Find a Pet</h2>
+
+    <div class="dropdown">
+        <select autofocus name="animalList" ng-change="storeAnimal()" ng-model="animal">
+            <option value="" selected="selected">Choose an animal</option>
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+            <option value="smallfurry">Small Furry Animal</option>
+            <option value="barnyard">Barnyard</option>
+            <option value="bird">Bird</option>
+            <option value="horse">Horse</option>
+            <option value="pig">Pig</option>
+            <option value="reptile">Reptile</option>
+        </select>
+
+    </div>
+
+    <div class="pet-image"><img ng-src="{{animal.media.photos.photo[2].$t}}" class="random-pet-image"></div>
+
+    <div class="pet-info">
+
+        <h3>{{animal.name.$t}}</h3>
+        <p>Breed: {{animal.breeds.breed.$t}}</p>
+        <p>Age: {{animal.age.$t}}</p>
+        <p>Gender: {{animal.sex.$t}}</p>
+        <p>Shelter ID: {{animal.shelterId.$t}}</p>
+        <p>Shelter Address: {{animal.contact.address1.$t}}, {{animal.contact.city.$t}},
+            {{animal.contact.state.$t}} {{animal.contact.zip.$t}}</p>
+        <p>Shelter email: {{animal.contact.email.$t}}</p>
+        <p>Shelter Phone: {{animal.contact.phone.$t}}</p>
+
+        <p>Description: {{animal.description.$t}}</p>
+
+    </div>
+
+
+</div>
