@@ -22,6 +22,40 @@ h3 {
 
 }
 
+#menu {
+    text-align: center;
+    margin: 0 auto 0 auto;
+    padding-bottom: 40px;
+    width: 70%;
+}
+
+#menu ul {
+    text-align: center;
+    list-style:none;
+}
+
+#menu ul li {
+    text-align: center;
+    display:inline;
+    float:left;
+    margin-bottom:20px;
+}
+
+#menu ul li a {
+    padding: 20px;
+    text-decoration: none;
+    font: 17px 'Bitter', serif;
+    color: #402e16;
+}
+
+#menu ul li a:hover {
+    color: cadetblue;
+}
+
+#menu ul li a:active {
+    color: cadetblue;
+}
+
 #center {
     text-align: center;
     margin: 0 auto;
@@ -64,6 +98,12 @@ h3 {
     float: right;
 }
 
+.favorite-info {
+    width: 70%;
+    text-align: left;
+    float: right;
+}
+
 .pet-content {
 
 }
@@ -85,40 +125,14 @@ h3 {
     margin: 0 20px 20px 20px;
 }
 
+.favorite-image {
+    width: 200px;
+    height: auto;
+    float: left;
+    margin: 0 20px 20px 20px;
+}
+
 .dropdown {
     margin-bottom: 40px;
 }
 
-/*#menu {*/
-    /*text-align: center;*/
-    /*margin: 0 auto 0 auto;*/
-    /*padding-bottom: 40px;*/
-    /*width: 70%;*/
-/*}*/
-
-/*#menu ul {*/
-    /*text-align: center;*/
-    /*list-style:none;*/
-/*}*/
-
-/*#menu ul li {*/
-    /*text-align: center;*/
-    /*display:inline;*/
-    /*float:left;*/
-    /*margin-bottom:20px;*/
-/*}*/
-
-/*#menu ul li a {*/
-    /*padding: 20px;*/
-    /*text-decoration: none;*/
-    /*font: 17px 'Bitter', serif;*/
-    /*color: #402e16;*/
-/*}*/
-
-/*#menu ul li a:hover {*/
-    /*color: cadetblue;*/
-/*}*/
-
-/*#menu ul li a:active {*/
-    /*color: cadetblue;*/
-/*}*/

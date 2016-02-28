@@ -1,6 +1,10 @@
 var express = require("express");
 var app = express();
 var path = require('path');
+var dataRoute = require('./routes/data');
+var pg = require('pg');
+
+app.use('/data', dataRoute);
 
 app.get("/jq", function(req,res,next){
     res.sendFile(path.join(__dirname, "./public/views/index.html"));

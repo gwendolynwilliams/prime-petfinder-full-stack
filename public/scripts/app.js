@@ -18,5 +18,3 @@ myApp.config(['$routeProvider', function($routeProvider) {
             redirectTo: 'home'
         });
 }]);
-
-//two controllers - one for find page, one for favorites view
