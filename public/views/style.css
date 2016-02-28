@@ -22,11 +22,26 @@ h3 {
 
 }
 
+#wrapper {
+    text-align: center;
+    margin: 0 auto;
+}
+
+#content {
+    margin: 0 auto;
+    padding: 25px 40px;
+    width: 80%;
+    background-color: aliceblue;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius:15px;
+    overflow:hidden;
+}
+
 #menu {
     text-align: center;
-    margin: 0 auto 0 auto;
     padding-bottom: 40px;
-    width: 70%;
+    width: 500px;
 }
 
 #menu ul {
@@ -59,23 +74,6 @@ h3 {
 #center {
     text-align: center;
     margin: 0 auto;
-}
-
-#wrapper {
-    text-align: center;
-    margin: 0 auto;
-}
-
-#content {
-    text-align: center;
-    margin: 0 auto;
-    padding: 25px 40px;
-    width: 80%;
-    background-color: aliceblue;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    border-radius:15px;
-    overflow:hidden;
 }
 
 .footer {
@@ -134,5 +132,23 @@ h3 {
 
 .dropdown {
     margin-bottom: 40px;
+}
+
+.num-faves {
+    text-align: left;
+    margin-left: 20px;
+}
+
+.showFavorites {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.ng-hide:not(.ng-hide-animate) {
+    /* this is just another form of hiding an element */
+    display: block!important;
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
 }
 

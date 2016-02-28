@@ -2,15 +2,15 @@ myApp.factory('DataFactory', ['$http', function($http) {
     // PRIVATE
     var animals = undefined;
 
-    //var getData = function() {
-    //    console.log('getting data from server');
-    //    var promise = $http.get('/data').then(function(response) {
-    //        animals = response.data;
-    //        console.log('Async data response:', animals);
-    //    });
-    //
-    //    return promise;
-    //};
+    var getData = function() {
+        var promise = $http.get('/data').then(function(response) {
+            animals = response.data;
+            //console.log('Async data response:', animals);
+            return animals;
+        });
+
+        return promise;
+    };
 
     function postFave(animals) {
         console.log('postFave animals id: ', animals.animalId);
@@ -36,10 +36,9 @@ myApp.factory('DataFactory', ['$http', function($http) {
         faveData: function() {
             return animals;
         },
-        //retrieveData: function() {
-        //    return getData();
-        //},
-
+        retrieveData: function() {
+            return getData();
+        },
         postToDatabase: function(animals) {
             postFave(animals);
             return postFave;

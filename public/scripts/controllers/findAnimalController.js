@@ -2,6 +2,7 @@ myApp.controller('FindAnimalController', ['$scope', '$http', 'DataFactory', func
     $scope.data = {};
     $scope.dataFactory = DataFactory;
     $scope.showAnimal = false;
+    console.log('showAnimal: ', $scope.showAnimal);
 
     //to create dropdown menu
     $scope.chooseAnimal = function() {
@@ -26,10 +27,6 @@ myApp.controller('FindAnimalController', ['$scope', '$http', 'DataFactory', func
         // API key
         var key = 'ff1c522ca21887293656f30fae8861f5';
 
-        //if(animalType === undefined) {
-        //    animalType = 'dog';
-        //}
-
         var baseURL = 'http://api.petfinder.com/';
         var query = 'pet.getRandom';
         query += '?key=' + key;
@@ -47,7 +44,7 @@ myApp.controller('FindAnimalController', ['$scope', '$http', 'DataFactory', func
             }
         );
         $scope.showAnimal = true;
-        //console.log($scope.showAnimal);
+        console.log('showAnimal2: ', $scope.showAnimal);
     }
 
     petFinder();

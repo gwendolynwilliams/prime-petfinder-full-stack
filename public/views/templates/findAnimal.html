@@ -1,8 +1,8 @@
+<div ng-include="'views/templates/nav.html'"></div>
+
 <div class="pet-page">
 
     <h2>Find a Pet</h2>
-
-    <div ng-include="'views/templates/nav.html'"></div>
 
     <div class="dropdown">
         <select autofocus name="animalList" ng-change="chooseAnimal()" ng-model="animal">
@@ -18,7 +18,7 @@
         </select>
     </div>
 
-    <div ng-if="showAnimal">
+    <div ng-show="showAnimal">
 
         <div class="pet-image"><img ng-src="{{animal.media.photos.photo[2].$t}}" class="random-pet-image"></div>
 

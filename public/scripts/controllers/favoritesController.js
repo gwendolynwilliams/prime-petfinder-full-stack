@@ -2,15 +2,15 @@ myApp.controller('FavoritesController', ['$scope', 'DataFactory', function($scop
     $scope.data = {};
     $scope.dataFactory = DataFactory;
 
-    $scope.animals = [];
+    $scope.favorites = [];
 
     if($scope.dataFactory.faveData() === undefined) {
         // initial load
         $scope.dataFactory.retrieveData().then(function() {
-            $scope.animals = $scope.dataFactory.faveData();
+            $scope.favorites = $scope.dataFactory.faveData();
         });
     } else {
-        $scope.animals = $scope.dataFactory.faveData();
+        $scope.favorites = $scope.dataFactory.retrieveData();
     }
 
 }]);

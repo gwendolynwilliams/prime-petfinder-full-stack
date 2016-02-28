@@ -1,39 +1,24 @@
+<div ng-include="'views/templates/nav.html'"></div>
+
 <div class="favorites-page">
 
     <h2>Favorites</h2>
 
-    <div ng-include="'views/templates/nav.html'"></div>
+    <p class="num-faves">Number of Favorites: {{favorites.length}}</p>
 
-    <p>Number of Favorites: </p>
+    <div class="showFavorites" ng-repeat="favorite in favorites">
 
-    <div class="pet-image"><img ng-src="{{animal.media.photos.photo[2].$t}}" class="favorite-image"></div>
+        <div class="pet-image"><img ng-src="{{favorite.image}}" class="favorite-image"></div>
 
-    <div class="favorite-info">
+        <div class="favorite-info">
 
-        <h3>{{animal.name.$t}}</h3>
-        <p>Breed: {{animal.breeds.breed.$t}}</p>
-        <p>Id: {{animal.id.$t}}</p>
+            <h3>{{favorite.name}}</h3>
+            <p>Id: {{favorite.api_id}}</p>
 
-        <p>Description: {{animal.description.$t}}</p>
+            <p>Description: {{favorite.description}}...</p>
+
+        </div>
 
     </div>
 
 </div>
-
-<!--<p>Favorites</p>-->
-
-<!--<div class="petPage">-->
-    <!--<img ng-src="{{animal.media.photos.photo[2].$t}}" class="responsive">-->
-    <!--<h2>{{animal.name.$t}}</h2>-->
-    <!--<p>Breed: {{animal.breeds.breed.$t}}</p>-->
-    <!--<p>Age: {{animal.age.$t}}</p>-->
-    <!--<p>Gender: {{animal.sex.$t}}</p>-->
-    <!--<p>Shelter ID: {{animal.shelterId.$t}}</p>-->
-    <!--<p>Shelter Address: {{animal.contact.address1.$t}}, {{animal.contact.city.$t}},-->
-        <!--{{animal.contact.state.$t}} {{animal.contact.zip.$t}}</p>-->
-    <!--<p>Shelter email: {{animal.contact.email.$t}}</p>-->
-    <!--<p>Shelter Phone: {{animal.contact.phone.$t}}</p>-->
-    <!--<div class="petInfo">-->
-        <!--<p>Description: {{animal.description.$t}}</p>-->
-    <!--</div>-->
-<!--</div>-->
