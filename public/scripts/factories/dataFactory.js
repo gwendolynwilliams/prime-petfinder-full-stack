@@ -17,13 +17,13 @@ myApp.factory('DataFactory', ['$http', function($http) {
         $http({
             method: 'POST',
             url: '/data',
-            data: animals
-            //data: {
-            //    id: animals[0],
-            //    name: animals[1],
-            //    description: animals[2],
-            //    image: animals[3]
-            //}
+            //data: animals
+            data: {
+                id: animals.animalId,
+                name: animals.animalName,
+                description: animals.animalDesc,
+                image: animals.animalImage
+            }
         }).then(function(response) {
             console.log(response.data);
         });

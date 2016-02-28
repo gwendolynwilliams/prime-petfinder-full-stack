@@ -17,9 +17,6 @@ myApp.controller('FindAnimalController', ['$scope', '$http', 'DataFactory', func
             animalDesc: description,
             animalImage: image
         };
-
-        //var animals = [];
-        //animals.push(id, name, description, image);
         console.log('animals object from animal controller: ', animals);
         $scope.dataFactory.postToDatabase(animals);
         return animals;

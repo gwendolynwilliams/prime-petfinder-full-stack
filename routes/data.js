@@ -1,10 +1,14 @@
 var express = require('express');
 var app = express();
 var router = express.Router();
+var path = require('path');
 var pg = require('pg');
 var bodyParser = require('body-parser');
 
 var connectionString = '';
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 
 if(process.env.DATABASE_URL !== undefined) {
     connectionString = process.env.DATABASE_URL + 'ssl';
@@ -12,16 +16,16 @@ if(process.env.DATABASE_URL !== undefined) {
     connectionString = 'postgres://localhost:5432/Gwen';
 }
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
-
 router.post('/', function(req, res) {
     var results=[];
-    console.log(req.body.data.id);
-    //console.log('req.body.data.id: ', req.body.data[0]);
+
+    var truncatedDesc = req.body.description.substring(0,498);
+
+    //console.log(req.body);
+
     pg.connect(connectionString, function(err, client, done) {
         client.query('INSERT INTO favorites (api_id, image, name, description) VALUES ($1, $2, $3, $4);',
-            [req.data.id, req.data.image, req.data.name, req.data.description],
+            [req.body.id, req.body.image, req.body.name, truncatedDesc],
             function(err, results) {
                 done();
                 if(err) {
@@ -33,6 +37,5 @@ router.post('/', function(req, res) {
             });
     });
 });
-
 
 module.exports = router;

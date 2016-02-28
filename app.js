@@ -1,8 +1,12 @@
 var express = require("express");
 var app = express();
 var path = require('path');
+var bodyParser = require('body-parser');
 var dataRoute = require('./routes/data');
 var pg = require('pg');
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 
 app.use('/data', dataRoute);
 
