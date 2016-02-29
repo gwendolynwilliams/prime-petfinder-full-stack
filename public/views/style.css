@@ -102,10 +102,6 @@ h3 {
     float: right;
 }
 
-.pet-content {
-
-}
-
 .responsive {
     width: 100%;
     height: auto;
@@ -139,6 +135,15 @@ h3 {
     border-radius: 7px;
     height: 34px;
     outline: none;
+}
+
+.dropdown option {
+    width: 220px;
+    padding: 5px;
+    font: 14px 'Bitter', serif;
+    line-height: 1;
+    border-radius: 7px;
+    height: 34px;
 }
 
 .num-faves {

@@ -1,11 +1,11 @@
 myApp.factory('DataFactory', ['$http', function($http) {
+
     // PRIVATE
     var animals = undefined;
 
     var getData = function() {
         var promise = $http.get('/data').then(function(response) {
             animals = response.data;
-            //console.log('Async data response:', animals);
             return animals;
         });
 
@@ -17,7 +17,6 @@ myApp.factory('DataFactory', ['$http', function($http) {
         $http({
             method: 'POST',
             url: '/data',
-            //data: animals
             data: {
                 id: animals.animalId,
                 name: animals.animalName,
@@ -29,7 +28,6 @@ myApp.factory('DataFactory', ['$http', function($http) {
         });
         return postFave;
     }
-
 
     //PUBLIC
     var publicApi = {
