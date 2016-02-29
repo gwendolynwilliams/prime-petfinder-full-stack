@@ -6,6 +6,8 @@
 
     <div class="dropdown">
         <form>
+            <!--<select name="animalList" ng-change="chooseAnimal()" ng-model="animalDropdown" ng-options="animal for animal in animalDropdown">-->
+
             <select name="animalList" ng-change="chooseAnimal()" ng-model="animalDropdown">
                 <option value="" selected="selected">Choose an animal</option>
                 <option value="dog">Dog</option>
@@ -39,7 +41,7 @@
 
             <p>Description: {{animal.description.$t}}</p>
             <button class="button" ng-click="addFavorite(animal.id.$t, animal.name.$t, animal.description.$t, animal.media.photos.photo[2].$t)">Add to Favorites</button>
-
+            <span ng-show="favoriteAdded" class="favorite-added">favorite added!</span>
         </div>
 
     </div>

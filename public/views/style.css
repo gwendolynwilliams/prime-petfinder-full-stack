@@ -40,6 +40,7 @@ h3 {
 
 #menu {
     text-align: center;
+    margin: 0 auto;
     padding-bottom: 40px;
     width: 500px;
 }
@@ -96,6 +97,12 @@ h3 {
     float: right;
 }
 
+.home {
+    width: 40%;
+    text-align: left;
+    margin: 20px auto;
+}
+
 .favorite-info {
     width: 70%;
     text-align: left;
@@ -108,8 +115,9 @@ h3 {
 }
 
 .home-image {
-    width: 600px;
+    width: 60%;
     text-align: center;
+    margin: 20px auto 0 auto;
 }
 
 .random-pet-image {
@@ -164,3 +172,20 @@ h3 {
     left: -9999px;
 }
 
+.favorite-added {
+    color: #8b1c15;
+    font: 900 14px 'Bitter', serif;
+    margin-left: 10px;
+}
+
+.button {
+    width: 150px;
+    padding: 5px;
+    font: 14px 'Bitter', serif;
+    line-height: 1;
+    border-radius: 7px;
+    height: 34px;
+    outline: none;
+    background-color: #fff;
+    border: 1px solid #797479;
+}

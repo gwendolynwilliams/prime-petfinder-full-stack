@@ -4,7 +4,8 @@ myApp.config(['$routeProvider', function($routeProvider) {
 
     $routeProvider
         .when('/home', {
-            templateUrl: '/views/templates/home.html'
+            templateUrl: '/views/templates/home.html',
+            controller: 'FindAnimalController'
         })
         .when('/findAnimal', {
             templateUrl: '/views/templates/findAnimal.html',

@@ -1,13 +1,17 @@
-myApp.controller('FindAnimalController', ['$scope', '$http', 'DataFactory', function($scope, $http, DataFactory) {
+myApp.controller('FindAnimalController', ['$scope', '$http', '$location', 'DataFactory', function($scope, $http, $location, DataFactory) {
+
     $scope.data = {};
     $scope.dataFactory = DataFactory;
     $scope.showAnimal = false;
-    console.log('showAnimal: ', $scope.showAnimal);
+    $scope.favoriteAdded = false;
+    $scope.location = '';
+    $scope.animalDropdown ='';
 
     //to create dropdown menu
     $scope.chooseAnimal = function() {
         var animalType = $scope.animalDropdown;
         $scope.showAnimal = true;
+        $location.url('findAnimal');
         petFinder(animalType);
     };
 
@@ -21,6 +25,7 @@ myApp.controller('FindAnimalController', ['$scope', '$http', 'DataFactory', func
         };
         console.log('animals object from animal controller: ', animals);
         $scope.dataFactory.postToDatabase(animals);
+        $scope.favoriteAdded = true;
         return animals;
     };
 
@@ -44,7 +49,6 @@ myApp.controller('FindAnimalController', ['$scope', '$http', 'DataFactory', func
                 console.log($scope.animal);
             }
         );
-        console.log('showAnimal2: ', $scope.showAnimal);
     }
 
     petFinder();

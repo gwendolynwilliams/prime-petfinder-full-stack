@@ -19,7 +19,7 @@ if(process.env.DATABASE_URL !== undefined) {
 router.post('/', function(req, res) {
     var results=[];
 
-    var truncatedDesc = req.body.description.substring(0,498);
+    var truncatedDesc = req.body.description.substring(0,100);
 
     //console.log(req.body);
 
