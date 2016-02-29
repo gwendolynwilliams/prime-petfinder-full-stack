@@ -1,5 +1,6 @@
 myApp.controller('FavoritesController', ['$scope', 'DataFactory', function($scope, DataFactory) {
-    $scope.data = {};
+
+    //$scope.data = {};  //do I need this?
     $scope.dataFactory = DataFactory;
 
     $scope.favorites = [];

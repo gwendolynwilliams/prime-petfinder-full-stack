@@ -6,7 +6,8 @@ myApp.controller('FindAnimalController', ['$scope', '$http', 'DataFactory', func
 
     //to create dropdown menu
     $scope.chooseAnimal = function() {
-        var animalType = $scope.animal;
+        var animalType = $scope.animalDropdown;
+        $scope.showAnimal = true;
         petFinder(animalType);
     };
 
@@ -43,7 +44,6 @@ myApp.controller('FindAnimalController', ['$scope', '$http', 'DataFactory', func
                 console.log($scope.animal);
             }
         );
-        $scope.showAnimal = true;
         console.log('showAnimal2: ', $scope.showAnimal);
     }
 

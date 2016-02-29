@@ -130,8 +130,15 @@ h3 {
     margin: 0 20px 20px 20px;
 }
 
-.dropdown {
+.dropdown select {
     margin-bottom: 40px;
+    width: 220px;
+    padding: 5px;
+    font: 14px 'Bitter', serif;
+    line-height: 1;
+    border-radius: 7px;
+    height: 34px;
+    outline: none;
 }
 
 .num-faves {
