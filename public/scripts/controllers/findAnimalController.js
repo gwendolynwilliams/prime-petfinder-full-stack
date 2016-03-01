@@ -16,18 +16,27 @@ myApp.controller('FindAnimalController', ['$scope', '$http', '$location', 'DataF
     };
 
     //calls in the data route and calls the favoriteAnimal function
-    $scope.addFavorite = function(id, name, description, image) {
+    $scope.addFavorite = function() {
         var animals = {
-            animalId: id,
-            animalName: name,
-            animalDesc: description,
-            animalImage: image
+            animalId: $scope.animal.id.$t,
+            animalName: $scope.animal.name.$t,
+            animalDesc: $scope.animal.description.$t,
+            animalImage: $scope.animal.media.photos.photo[2].$t
         };
         console.log('animals object from animal controller: ', animals);
         $scope.dataFactory.postToDatabase(animals);
         $scope.favoriteAdded = true;
+
+        $scope.dataFactory.retrieveData().then(function() {
+            $scope.favorites = $scope.dataFactory.faveData();
+        });
+
         return animals;
     };
+
+    $scope.dataFactory.retrieveData().then(function() {
+        $scope.favorites = $scope.dataFactory.faveData();
+    });
 
     function petFinder(animalType) {
         // API key

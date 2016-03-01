@@ -12,6 +12,15 @@ myApp.factory('DataFactory', ['$http', function($http) {
         return promise;
     };
 
+    var deleteFave = function(id) {
+        $http({
+            method: 'DELETE',
+            url: '/data/' + id
+        }).then(function(response) {
+            console.log(response.data);
+        });
+    };
+
     function postFave(animals) {
         console.log('postFave animals id: ', animals.animalId);
         $http({
@@ -40,6 +49,10 @@ myApp.factory('DataFactory', ['$http', function($http) {
         postToDatabase: function(animals) {
             postFave(animals);
             return postFave;
+        },
+        deleteFromDatabase: function(id) {
+            deleteFave(id);
+            return deleteFave;
         }
     };
 

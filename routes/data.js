@@ -63,5 +63,30 @@ router.get('/', function(req, res) {
     });
 });
 
+router.delete('/*', function(req, res) {
+    var results = [];
+
+    var id = req.params[0]; // - first request
+    console.log('id: ', id);
+
+
+    pg.connect(connectionString, function(err, client, done) {
+        client.query('DELETE FROM favorites WHERE api_id = ($1);',
+            [id],
+
+            function(err, results) {
+                done();
+                if(err) {
+                    console.log('Error deleting data: ', err);
+                    res.send(false);
+                } else {
+                    //console.log(id);
+                    res.send(results);
+                }
+            });
+
+    });
+});
+
 
 module.exports = router;

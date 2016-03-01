@@ -22,6 +22,8 @@
         </form>
     </div>
 
+    <p class="num-faves">Number of Favorites: {{favorites.length}}</p>
+
     <div ng-show="showAnimal">
 
         <div class="pet-image"><img ng-src="{{animal.media.photos.photo[2].$t}}" class="random-pet-image"></div>
@@ -40,7 +42,7 @@
             <p>Shelter Phone: {{animal.contact.phone.$t}}</p>
 
             <p>Description: {{animal.description.$t}}</p>
-            <button class="button" ng-click="addFavorite(animal.id.$t, animal.name.$t, animal.description.$t, animal.media.photos.photo[2].$t)">Add to Favorites</button>
+            <button class="button" ng-click="addFavorite()">Add to Favorites</button>
             <span ng-show="favoriteAdded" class="favorite-added">favorite added!</span>
         </div>
 

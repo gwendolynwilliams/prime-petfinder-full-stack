@@ -189,3 +189,15 @@ h3 {
     background-color: #fff;
     border: 1px solid #797479;
 }
+
+.delete-button {
+    width: 180px;
+    padding: 5px;
+    font: 12px 'Bitter', serif;
+    line-height: 1;
+    border-radius: 7px;
+    height: 27px;
+    outline: none;
+    background-color: #fff;
+    border: 1px solid #797479;
+}
